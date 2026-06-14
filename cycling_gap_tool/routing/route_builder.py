@@ -553,24 +553,45 @@ def _build_segments(weighted_graph: nx.Graph, road_graph: nx.Graph,
 
 def _classify_route_quality(route: Route, excessive_detour: bool = False) -> str:
     """
-    Classify overall route quality based on LTS and detour ratio.
+    Classify overall route quality by the SHARE OF ROUTE LENGTH at each stress
+    level, not by the single worst segment. A route that is comfortable for most
+    of its length but crosses one arterial (a short LTS-4 segment) is rated on
+    what it mostly is, not doomed by the crossing.
 
-    excellent: LTS 1-2 throughout, minimal detour
-    good:      LTS 1-2 mostly, acceptable detour
-    fair:      Some LTS 3 segments or high detour
-    poor:      LTS 4 segments, very high detour / fallback, or a detour that
-               exceeds MAX_ROUTE_DETOUR (the route wanders so far it is not a
-               credible single recommendation without a corridor study)
+    Length-weighted bands, treating LTS 4 (grade-separation territory) more
+    severely than LTS 3 (confident-cyclist comfort, a painted-lane candidate):
+      poor:      >40% of length at LTS 4, or fallback, or extreme detour
+      excellent: <=5% high-stress AND low detour         (essentially all LTS 1-2)
+      good:      <=20% high-stress and <=10% LTS-4        (mostly comfortable)
+      fair:      <=25% LTS-4 and acceptable detour        (rideable; clear upgrade path)
+      poor:      everything else
+
+    `lts_problem_pct` (share of length at LTS 3/4) is computed in
+    _route_for_gap and stays consistent with the upgrade-complexity label.
     """
     if not route.found:
         return "not_found"
-    if route.fallback or route.worst_lts >= 4 or excessive_detour:
+    if route.fallback or excessive_detour:
         return "poor"
-    if route.worst_lts == 3 or route.detour_ratio > 1.8:
-        return "fair"
-    if route.worst_lts <= 2 and route.detour_ratio <= 1.4:
+
+    total = route.total_length_m or 1.0
+    lts4_pct = 100 * sum(s.length_m for s in route.segments if s.lts >= 4) / total
+    lts3_pct = 100 * sum(s.length_m for s in route.segments if s.lts == 3) / total
+    high_stress_pct = lts3_pct + lts4_pct  # == route.lts_problem_pct
+
+    # LTS 4 (needs grade separation / cycle track) is treated more severely than
+    # LTS 3 (confident-cyclist comfort, typically a painted-lane candidate). A
+    # route dominated by LTS 4 is poor; a route that is merely LTS 3 for much of
+    # its length is fair -- rideable, with a clear upgrade path.
+    if lts4_pct > 40:
+        return "poor"
+    if high_stress_pct <= 5 and route.detour_ratio <= 1.4:
         return "excellent"
-    return "good"
+    if high_stress_pct <= 20 and lts4_pct <= 10:
+        return "good"
+    if lts4_pct <= 25 and route.detour_ratio <= 2.0:
+        return "fair"
+    return "poor"
 
 
 # ─── Output writers ───────────────────────────────────────────────────────────

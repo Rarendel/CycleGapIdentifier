@@ -61,8 +61,12 @@ LTS_NO_FACILITY = {
     (40, 2):  3,
     (40, 99): 4,
     (50, 1):  3,
-    (50, 2):  4,
-    (50, 99): 4,
+    (50, 2):  3,   # 50 km/h, <=2 lanes, no facility -> LTS 3 (confident cyclists).
+                   # Per Mekuria/Furth, LTS 4 is reserved for higher speed or
+                   # 4+ lanes; a standard 50 km/h two-lane urban arterial is
+                   # LTS 3. (Was 4 -- that mislabelled most untagged secondary
+                   # roads as maximally hostile, since OSM rarely tags `lanes`.)
+    (50, 99): 4,   # 50 km/h with many (4+) lanes remains LTS 4
     (60, 99): 4,
     (80, 99): 4,
     (99, 99): 4,

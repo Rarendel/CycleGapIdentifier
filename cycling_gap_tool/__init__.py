@@ -1,2 +1,2 @@
 """Cycling Infrastructure Gap Analysis Tool."""
-__version__ = "5.6"
+__version__ = "5.7"
