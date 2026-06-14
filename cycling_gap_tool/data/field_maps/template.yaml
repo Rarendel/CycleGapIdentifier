@@ -1,0 +1,33 @@
+# Field map template — copy and adapt for each municipality
+# Rename this file to your_city.yaml and adjust all values below.
+#
+# Usage:
+#   python main.py --region "Your City" \
+#     --infra-file ./data/your_city_cycling.geojson \
+#     --infra-field-map ./data/field_maps/your_city.yaml
+
+source_name: "Your City Cycling Network"
+
+# CRS: null = WGS84 already. Otherwise use EPSG code e.g. "EPSG:32614"
+source_crs: null
+
+# Status filtering: null = include all features
+status_field: null
+status_include: []
+
+# Facility type mapping — adjust attribute name and values to match your file
+facility_field: "FACILITY_TYPE"   # <-- change this to your attribute name
+
+facility_map:
+  # Add your attribute values here, e.g.:
+  # "Protected Pathway": protected_track
+  # "Bike Lane": cycle_lane
+  # "Shared Path": shared_path
+
+facility_fallback: "unknown"
+
+# Name field for display labels — set to null if not available
+name_field: "NAME"
+name_fallback: "Unnamed"
+
+min_segment_length_m: 5

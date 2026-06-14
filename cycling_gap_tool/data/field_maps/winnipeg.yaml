@@ -1,0 +1,94 @@
+# Field map: City of Winnipeg Active Transportation Network
+# Source: https://data.winnipeg.ca/Transportation/Active-Transportation-Infrastructure/h7tm-46yb
+#
+# Download the dataset as GeoJSON or Shapefile from the Winnipeg Open Data portal.
+# The geometry is typically in WGS84 (EPSG:4326) for GeoJSON exports, or
+# NAD83 / UTM Zone 14N (EPSG:26914) for Shapefile exports.
+#
+# Usage:
+#   python main.py --region "Winnipeg" \
+#     --infra-file ./data/winnipeg_at_network.geojson \
+#     --infra-field-map ./data/field_maps/winnipeg.yaml
+
+source_name: "City of Winnipeg Active Transportation Network"
+
+# CRS of the source file. Use EPSG code.
+# GeoJSON exports from the Winnipeg portal are usually EPSG:4326.
+# Shapefile exports are usually EPSG:26914 (NAD83 UTM Zone 14N).
+# Set to null to skip reprojection (assumes WGS84 already).
+source_crs: null   # override with e.g. "EPSG:26914" if your .shp needs reprojection
+
+# ── Status filtering ──────────────────────────────────────────────────────────
+# Only features with these status values are included in the analysis.
+# Comment out or set to null to include all features regardless of status.
+status_field: "STATUS"          # attribute name — adjust to match your export
+status_include:                  # case-insensitive matching
+  - "Existing"
+  - "EXISTING"
+  - "existing"
+  - "Built"
+  - "BUILT"
+# status_field: null            # uncomment this line to disable status filtering
+
+# ── Facility type mapping ─────────────────────────────────────────────────────
+# Maps source attribute values → internal facility types used by the gap finder.
+# Internal types: protected_track | cycle_lane | shared_path | shared_roadway | signed_route
+#
+# Only protected_track, cycle_lane, and shared_path enter gap analysis.
+# shared_roadway and signed_route are excluded (same rule as OSM pipeline).
+#
+# Adjust the attribute name and values to match your specific export.
+facility_field: "FAC_TYPE"      # attribute name — check your file's column names
+
+facility_map:
+  # Multi-use paths / protected tracks
+  "Multi-Use Path":              protected_track
+  "Multi Use Path":              protected_track
+  "MUP":                         protected_track
+  "Protected Bike Lane":         protected_track
+  "Protected Cycle Track":       protected_track
+  "Cycle Track":                 protected_track
+  "Separated Bike Lane":         protected_track
+  "Off-Road Path":               protected_track
+  "Off Road Path":               protected_track
+  "Trail":                       protected_track
+  "Recreational Trail":          protected_track
+
+  # Painted cycle lanes (on-road, not physically separated)
+  "Bike Lane":                   cycle_lane
+  "Bike lane":                   cycle_lane
+  "Painted Bike Lane":           cycle_lane
+  "Cycle Lane":                  cycle_lane
+  "On-Street Bike Lane":         cycle_lane
+  "Buffered Bike Lane":          cycle_lane
+
+  # Shared-use paths (off-road but shared with pedestrians)
+  "Shared Path":                 shared_path
+  "Shared Use Path":             shared_path
+  "Shared-Use Path":             shared_path
+  "Greenway":                    shared_path
+  "Neighbourhood Greenway":      shared_path
+
+  # Excluded from gap analysis (but kept for display)
+  "Shared Roadway":              shared_roadway
+  "Signed Route":                signed_route
+  "Sharrow":                     shared_roadway
+  "Shared Lane":                 shared_roadway
+
+# Fallback if a feature's facility value isn't in the map above.
+# "unknown" means the feature is excluded from gap analysis.
+facility_fallback: "unknown"
+
+# ── Name field ────────────────────────────────────────────────────────────────
+# Used for display labels on the map output. Set to null if not available.
+name_field: "ROUTE_NAME"        # try also: "NAME", "TRAIL_NAME", "STREET_NAME"
+name_fallback: "Unnamed"
+
+# ── Geometry type handling ────────────────────────────────────────────────────
+# Multi-part geometries (MultiLineString) are automatically split into
+# individual LineStrings. No configuration needed.
+
+# ── Minimum segment length ────────────────────────────────────────────────────
+# Segments shorter than this (metres) are skipped. Prevents micro-stubs from
+# data entry errors polluting the graph. Same default as OSM pipeline.
+min_segment_length_m: 5

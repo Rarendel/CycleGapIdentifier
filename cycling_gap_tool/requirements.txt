@@ -1,0 +1,22 @@
+# Cycling Infrastructure Gap Analysis Tool — dependencies
+# Install core requirements:
+#   pip install -r requirements.txt
+#
+# For Shapefile (.shp) support, also install the optional extras:
+#   pip install -r requirements.txt -r requirements-gis.txt
+
+# ── Core (always required) ────────────────────────────────────────────────────
+networkx>=3.0          # graph construction and connectivity analysis
+requests>=2.28         # Overpass API queries
+
+# ── Optional: shapefile / GeoJSON input (--infra-file) ───────────────────────
+# The tool works without these for OSM-only mode.
+# Install them to use --infra-file with a municipal Shapefile or GeoJSON.
+#
+# GeoJSON (.geojson / .json):
+#   Only PyYAML is needed (for the field-map config).
+#   pip install pyyaml
+#
+# Shapefile (.shp):
+#   All three are needed.
+#   pip install pyyaml fiona pyproj

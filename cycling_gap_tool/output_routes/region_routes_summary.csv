@@ -1,0 +1,141 @@
+gap_id,gap_type,strategy,from_street,to_street,route_found,fallback_route,total_length_m,straight_line_m,detour_ratio,worst_lts,lts_problem_length_m,lts_problem_pct,upgrade_complexity,dominant_facility,estimated_cost_cad,route_quality,notes
+GAP-120,dangling,lts,Duke Street West,Victoria Street North,True,False,251.6,235.7,1.07,4,251.6,100.0,complex,grade_separated_path,2012777,poor,
+GAP-126,dangling,lts,Conestoga Parkway,King Street North,False,False,0.0,196.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-096,dangling,lts,Marcon Court,Unnamed service,False,False,0.0,316.2,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-044,detour,lts,Columbia Street West,Unnamed service,False,False,0.0,318.1,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-094,dangling,lts,Jubilee Drive,Queen Street South,False,False,0.0,323.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-112,dangling,lts,River Road East,Krug Street,True,False,287.6,267.3,1.08,4,287.6,100.0,complex,protected_cycle_track,718958,poor,
+GAP-113,dangling,lts,University Avenue West,Westmount Road North,True,False,306.4,265.5,1.15,4,306.4,100.0,complex,grade_separated_path,2451415,poor,
+GAP-030,corridor,lts,Erb Street West,Erb Street West,True,False,1776.1,772.6,2.3,4,910.8,51.3,complex,protected_cycle_track,7616270,poor,
+GAP-042,detour,lts,David Street,Highland Road East,True,False,1286.7,553.7,2.32,4,1098.1,85.3,complex,painted_cycle_lane,4287603,poor,
+GAP-132,dangling,lts,Bleams Road,Harding Street,False,False,0.0,159.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-131,dangling,lts,Sleepy Hollow Court,Sleepy Hollow Court,False,False,0.0,161.3,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-041,detour,lts,Highland Road East,Mill Street,True,False,1774.7,385.2,4.61,4,1241.9,70.0,complex,painted_cycle_lane,1963164,poor,Route detour ratio 4.6x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-086,dangling,lts,Albert Street,MidCampus Drive,True,False,745.1,334.4,2.23,4,593.8,79.7,complex,protected_cycle_track,3670686,poor,
+GAP-127,dangling,lts,Highbrook Street,Westmount Road East,True,False,157.4,170.1,0.93,3,157.4,100.0,complex,painted_cycle_lane,47218,fair,
+GAP-080,dangling,lts,Unnamed service,Father David Bauer Drive,False,False,0.0,353.8,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-106,dangling,lts,Country Hill Drive,Homer Watson Boulevard,False,False,0.0,279.0,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-121,dangling,lts,Boniface Avenue,Walton Avenue,False,False,0.0,235.5,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-140,dangling,lts,Fairway Road North,Fairway Road North,True,False,2600.6,91.5,28.41,4,2600.6,100.0,complex,painted_cycle_lane,4278937,poor,Route detour ratio 28.4x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-128,dangling,lts,Sims Estate Drive,Sims Estate Drive,False,False,0.0,165.5,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-147,dangling,lts,Franklin Street North,Franklin Street South,True,False,61.3,61.3,1.0,4,61.3,100.0,complex,protected_cycle_track,153320,poor,
+GAP-014,island,lts,Sydney Street South,Ottawa Street South,False,False,0.0,359.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-083,dangling,lts,Shirley Avenue,Victoria Street North,True,False,1862.7,347.1,5.37,4,1862.7,100.0,complex,grade_separated_path,13139110,poor,Route detour ratio 5.4x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-046,detour,lts,Highland Road West,Marlborough Avenue,False,False,0.0,435.3,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-066,connector,lts,Ottawa Street South,Milfoil Crescent,False,False,0.0,413.8,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-058,connector,lts,University Avenue West,Unnamed service,True,False,1322.8,460.2,2.87,4,784.8,59.3,complex,grade_separated_path,7369713,poor,Route detour ratio 2.9x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-095,dangling,lts,Bridge Street East,Lancaster Street West,False,False,0.0,320.8,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-088,dangling,lts,Block Line Road,Vanier Drive,True,False,659.1,332.9,1.98,4,659.1,100.0,complex,painted_cycle_lane,2190059,poor,
+GAP-087,dangling,lts,Wilson Avenue,Fairlawn Road,True,False,324.5,333.8,0.97,4,324.5,100.0,complex,protected_cycle_track,811243,poor,
+GAP-051,connector,lts,Windale Crescent,Ottawa Street South,True,False,506.7,499.3,1.01,4,506.7,100.0,complex,grade_separated_path,4053453,poor,
+GAP-071,dangling,lts,Frederick Street,Lancaster Street East,False,False,0.0,397.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-078,dangling,lts,Courtland Avenue East,Ottawa Street South,True,False,362.2,363.3,1.0,3,362.2,100.0,complex,painted_cycle_lane,108656,fair,
+GAP-038,corridor,lts,Sportsworld Drive,Sportsworld Drive,True,False,108.6,108.6,1.0,4,108.6,100.0,complex,grade_separated_path,868890,poor,
+GAP-146,dangling,lts,Unnamed tertiary,River Road East,False,False,0.0,63.1,1.0,1,0.0,0.0,,,0,,Start and end snap to same road node — gap too small to route
+GAP-047,detour,lts,Casswell Court,Lexington Road,True,False,144.2,197.9,0.73,3,144.2,100.0,complex,protected_cycle_track,360430,fair,
+GAP-119,dangling,lts,Victoria Street North,Centennial Road,True,False,254.2,243.7,1.04,3,254.2,100.0,complex,painted_cycle_lane,76260,fair,
+GAP-053,connector,lts,Parkside Drive,Weber Street North,True,False,830.9,495.8,1.68,4,513.1,61.7,complex,grade_separated_path,5286609,poor,
+GAP-052,connector,lts,Homer Watson Boulevard,Jay Court,True,False,2694.8,499.0,5.4,4,2169.8,80.5,complex,painted_cycle_lane,7884566,poor,Route detour ratio 5.4x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-091,dangling,lts,Connaught Street,Connaught Street,True,False,1044.1,327.4,3.19,3,327.7,31.4,complex,painted_cycle_lane,1146354,poor,Route detour ratio 3.2x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-124,dangling,lts,Residence Road,Columbia Street West,True,False,269.2,229.2,1.17,3,269.2,100.0,complex,protected_cycle_track,672998,fair,
+GAP-141,dangling,lts,Fischer-Hallman Road,Highbrook Court,False,False,0.0,90.0,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-090,dangling,lts,Edgewater Crescent,Fairway Road North,True,False,3283.2,331.1,9.92,4,3283.2,100.0,complex,painted_cycle_lane,8504124,poor,Route detour ratio 9.9x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-101,dangling,lts,Activa Avenue,Activa Avenue,False,False,0.0,302.2,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-149,dangling,lts,Fischer-Hallman Road,Fischer-Hallman Road,True,False,78.0,48.3,1.61,4,78.0,100.0,complex,protected_cycle_track,389694,poor,
+GAP-109,dangling,lts,Martinglen Crescent,Century Hill Drive,False,False,0.0,269.5,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-097,dangling,lts,Strasburg Road,Unnamed service,True,False,1531.1,313.9,4.88,4,1016.7,66.4,complex,protected_cycle_track,6957756,poor,Route detour ratio 4.9x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-110,dangling,lts,Courtland Avenue East,Borden Avenue South,True,False,269.4,269.1,1.0,3,269.4,100.0,complex,painted_cycle_lane,80820,fair,
+GAP-069,connector,lts,Unnamed service,Greenfield Avenue,False,False,0.0,402.1,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-033,corridor,lts,Victoria Street South,Victoria Street South,True,False,375.9,374.3,1.0,4,375.9,100.0,complex,grade_separated_path,3006936,poor,
+GAP-055,connector,lts,Highland Road East,Stirling Avenue South,False,False,0.0,463.3,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-114,connector,lts,Shelley Drive,Shelly Drive,False,False,0.0,256.8,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-102,dangling,lts,Knightsbridge Court,Keats Way,True,False,308.8,298.3,1.04,3,308.8,100.0,complex,protected_cycle_track,771937,fair,
+GAP-125,dangling,lts,Plains Road,Fischer-Hallman Road,False,False,0.0,224.9,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-081,dangling,lts,Corfield Place,Lackner Boulevard,False,False,0.0,353.8,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-122,dangling,lts,Oakdale Court,Doon Mills Drive,False,False,0.0,233.5,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-093,dangling,lts,Doon Village Road,Homer Watson Boulevard,False,False,0.0,325.0,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-150,dangling,lts,Blair Creek Drive,Blair Creek Drive,True,False,30.3,35.2,0.86,3,30.3,100.0,complex,protected_cycle_track,75829,fair,
+GAP-065,connector,lts,Unnamed service,Unnamed service,False,False,0.0,430.5,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-115,dangling,lts,The Grand Manors of Sims Estate,Walter Bean Grand River Trail,False,False,0.0,255.5,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-057,connector,lts,Ottawa Street North,Chartwell Court,False,False,0.0,461.5,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-075,dangling,lts,Balzer Road,Courtland Avenue East,True,False,372.0,372.6,1.0,4,372.0,100.0,complex,protected_cycle_track,930098,poor,
+GAP-134,dangling,lts,Goodrich Drive,Goodrich Drive,False,False,0.0,158.1,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-040,corridor,lts,Fountain Street,Fountain Street,True,False,34.8,34.8,1.0,4,34.8,100.0,complex,grade_separated_path,278515,poor,
+GAP-070,dangling,lts,River Road East,Thaler Avenue,True,False,449.8,397.6,1.13,4,423.9,94.2,complex,protected_cycle_track,1124595,poor,
+GAP-111,dangling,lts,Cedar Crest Street,Conestoga Parkway,False,False,0.0,267.6,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-072,connector,lts,Ferndale Place,University Avenue East,False,False,0.0,378.9,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-031,corridor,lts,Ottawa Street North,Ottawa Street North,True,False,523.1,521.0,1.0,4,523.1,100.0,complex,grade_separated_path,4184746,poor,
+GAP-067,connector,lts,Wabanaki Drive,Unnamed service,False,False,0.0,411.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-144,dangling,lts,University Avenue East,Bridge Street West,True,False,75.7,75.0,1.01,4,75.7,100.0,complex,grade_separated_path,605550,poor,
+GAP-084,dangling,lts,Keewatin Avenue,Misty Court,False,False,0.0,343.9,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-068,connector,lts,Postmaster Drive,Huron Road,True,False,495.1,410.2,1.21,4,170.0,34.3,complex,painted_cycle_lane,1457484,poor,
+GAP-104,dangling,lts,Weber Street North,Weber Street North,True,False,294.3,291.4,1.01,4,294.3,100.0,complex,grade_separated_path,2354114,poor,
+GAP-099,dangling,lts,Farmington Place,Doon Village Road,False,False,0.0,310.6,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-105,dangling,lts,Tinatawa Court,Grand River Boulevard,False,False,0.0,290.7,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-079,dangling,lts,Parkvale Drive,Unnamed residential,False,False,0.0,353.9,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-130,dangling,lts,Old Mill Road,Old Mill Road,True,False,166.5,161.8,1.03,3,166.5,100.0,complex,painted_cycle_lane,49964,fair,
+GAP-107,dangling,lts,Eden Oak Trail,Grand Flats Trail,False,False,0.0,275.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-148,dangling,lts,Wyecroft Boulevard,Strathmere Court,False,False,0.0,50.7,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-133,dangling,lts,Doon Village Road,Manitou Drive,True,False,159.7,158.2,1.01,4,159.7,100.0,complex,grade_separated_path,1277816,poor,
+GAP-063,connector,lts,Unnamed service,Northfield Drive East,False,False,0.0,447.1,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-036,corridor,lts,Lackner Boulevard,Lackner Boulevard,True,False,128.0,128.0,1.0,4,128.0,100.0,complex,grade_separated_path,1023905,poor,
+GAP-092,connector,lts,Lackner Boulevard,Springmount Drive,False,False,0.0,327.3,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-048,detour,lts,Unnamed service,Weber Street North,False,False,0.0,585.8,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-043,detour,lts,Ira Needles Boulevard,Old Maple Lane,False,False,0.0,256.6,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-027,island,lts,Union Boulevard,Union Boulevard,False,False,0.0,38.8,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-011,island,lts,Davenport Road,King Street North,True,False,813.8,370.6,2.2,4,296.3,36.4,complex,protected_cycle_track,2875890,poor,
+GAP-074,dangling,lts,Rittenhouse Road,Ashley Court,True,False,5356.6,377.3,14.2,4,3160.2,59.0,complex,protected_cycle_track,11078672,poor,Route detour ratio 14.2x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-061,connector,lts,Fischer-Hallman Road,Activa Avenue,True,False,443.9,451.7,0.98,4,443.9,100.0,complex,grade_separated_path,3551254,poor,
+GAP-062,connector,lts,Lackner Boulevard,Drumoak Place,False,False,0.0,451.6,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-012,island,lts,Margaret Avenue,Weber Street West,False,False,0.0,368.5,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-045,detour,lts,Weber Street North,Unknown,False,False,0.0,531.0,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-016,island,lts,Lincoln Road,Mackay Crescent,False,False,0.0,175.2,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-129,dangling,lts,Bleams Road,Bleams Road,False,False,0.0,164.1,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-085,dangling,lts,Unknown,Unnamed service,False,False,0.0,339.1,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-142,dangling,lts,Fischer-Hallman Road,Seabrook Drive,True,False,1812.4,88.3,20.53,4,1812.4,100.0,complex,painted_cycle_lane,7353362,poor,Route detour ratio 20.5x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-035,corridor,lts,Lackner Boulevard,Lackner Boulevard,True,False,162.9,162.0,1.01,4,162.9,100.0,complex,grade_separated_path,1303521,poor,
+GAP-019,island,lts,Vernon Avenue,Stirling Avenue South,False,False,0.0,105.3,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-032,corridor,lts,Lackner Boulevard,Lackner Boulevard,True,False,378.8,376.5,1.01,4,378.8,100.0,complex,grade_separated_path,3030358,poor,
+GAP-135,dangling,lts,Fairway Road North,Fairway Road North,True,False,150.1,148.6,1.01,4,150.1,100.0,complex,grade_separated_path,1200875,poor,
+GAP-022,island,lts,Roxton Drive,Roxton Drive,True,False,78.7,74.9,1.05,3,54.1,68.8,complex,protected_cycle_track,196711,fair,
+GAP-098,dangling,lts,Huron Road,Battler Road,True,False,325.7,313.9,1.04,4,325.7,100.0,complex,grade_separated_path,2605340,poor,
+GAP-064,connector,lts,Lackner Boulevard,Bingemans Centre Drive,True,False,438.4,433.6,1.01,4,438.4,100.0,complex,grade_separated_path,3507519,poor,
+GAP-008,island,lts,Ottawa Street South,Highland Road East,False,False,0.0,476.2,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-003,island,lts,Strasburg Road,Homer Watson Boulevard,True,False,1688.1,916.3,1.84,4,1433.0,84.9,complex,grade_separated_path,7551555,poor,
+GAP-100,connector,lts,Madeleine Street,Maitland Street,False,False,0.0,303.7,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-009,island,lts,Unnamed service,University Avenue West,False,False,0.0,388.1,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-034,corridor,lts,Lackner Boulevard,Lackner Boulevard,True,False,205.3,205.3,1.0,4,205.3,100.0,complex,grade_separated_path,1642382,poor,
+GAP-010,island,lts,Conestoga Parkway,Stirling Avenue South,False,False,0.0,386.6,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-015,island,lts,Frederick Street,King Street West,True,False,386.4,288.6,1.34,4,386.4,100.0,complex,grade_separated_path,3090820,poor,
+GAP-002,island,lts,Margaret Avenue,Weber Street West,True,False,1694.7,1059.7,1.6,4,1484.6,87.6,complex,protected_cycle_track,3120230,poor,
+GAP-108,dangling,lts,Bearinger Road,Bearinger Road,True,False,265.4,272.3,0.97,4,265.4,100.0,complex,protected_cycle_track,732896,poor,
+GAP-076,dangling,lts,Carlin Avenue,Shelley Drive,False,False,0.0,366.0,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-117,dangling,lts,Lincoln Road,University Avenue East,False,False,0.0,249.3,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-049,detour,lts,Fischer-Hallman Road North,Victoria Street South,False,False,0.0,458.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-103,dangling,lts,Erbsville Court,Keats Way,True,False,297.1,295.0,1.01,4,297.1,100.0,complex,grade_separated_path,2377186,poor,
+GAP-073,dangling,lts,Otterbein Road,Otterbein Road,True,False,384.9,377.9,1.02,3,384.9,100.0,complex,painted_cycle_lane,115484,fair,
+GAP-024,island,lts,Laurelwood Drive,James Downey Way,False,False,0.0,62.2,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-054,connector,lts,Hagen Court,Unnamed service,False,False,0.0,463.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-020,island,lts,University Avenue East,Carter Avenue,True,False,99.1,94.9,1.04,3,99.1,100.0,complex,painted_cycle_lane,29743,fair,
+GAP-077,dangling,lts,Strasburg Road,Huron Road,True,False,1487.2,364.2,4.08,4,1487.2,100.0,complex,grade_separated_path,7912915,poor,Route detour ratio 4.1x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-017,island,lts,Keats Way,Keats Way,True,False,169.3,165.2,1.03,3,169.3,100.0,complex,protected_cycle_track,423273,fair,
+GAP-021,island,lts,Glasgow Street,Glasgow Street,True,False,96.4,94.3,1.02,2,0,0.0,straightforward,protected_cycle_track,240894,excellent,
+GAP-059,connector,lts,Woolwich Street,Unnamed service,False,False,0.0,459.3,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-060,connector,lts,Homer Watson Boulevard,Homer Watson Boulevard,True,False,2085.4,457.3,4.56,4,2085.4,100.0,complex,grade_separated_path,13759417,poor,Route detour ratio 4.6x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-145,dangling,lts,Fountain Street North,Fountain Street North,True,False,57.8,63.2,0.91,4,57.8,100.0,complex,grade_separated_path,462352,poor,
+GAP-013,island,lts,Mill Street,Highland Road East,False,False,0.0,360.9,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-023,island,lts,Belmont Avenue West,Belmont Avenue West,True,False,65.9,73.6,0.9,4,65.9,100.0,complex,protected_cycle_track,164749,poor,
+GAP-089,connector,lts,Strasburg Road,Huron Road,True,False,863.8,332.4,2.6,4,863.8,100.0,complex,painted_cycle_lane,599891,poor,Route detour ratio 2.6x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-116,connector,lts,Fountain Street South,Trans-Canada Trail,False,False,0.0,249.6,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-001,island,lts,East Avenue,Charles Street East,False,False,0.0,1111.2,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-082,connector,lts,Huron Road,Huron Road,True,False,2834.7,350.7,8.08,4,2392.6,84.4,complex,painted_cycle_lane,7671468,poor,Route detour ratio 8.1x exceeds threshold (2.5x) — direct corridor study recommended.
+GAP-026,island,lts,Northfield Drive West,Northfield Drive West,False,False,0.0,42.0,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-004,island,lts,Unnamed service,Ira Needles Boulevard,False,False,0.0,908.5,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-005,island,lts,McGarry Drive,Fischer-Hallman Road,True,False,1439.5,713.2,2.02,3,1439.5,100.0,complex,painted_cycle_lane,1753838,fair,
+GAP-025,island,lts,Bennington Gate,Columbia Street West,False,False,0.0,61.4,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-007,island,lts,Woodhurst Court,Westforest Trail,False,False,0.0,529.1,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-029,island,lts,Erb Street West,Erb Street West,True,False,28.3,24.7,1.15,4,28.3,100.0,complex,grade_separated_path,226206,poor,
+GAP-028,island,lts,Laurelwood Drive,Laurelwood Drive,True,False,9.8,26.4,0.37,4,9.8,100.0,complex,protected_cycle_track,24574,poor,
+GAP-018,island,lts,Lexington Road,Lexington Road,True,False,114.7,114.7,1.0,4,114.7,100.0,complex,grade_separated_path,917691,poor,
+GAP-006,island,lts,Foxglove Crescent,Royal Orchard Place,False,False,0.0,647.8,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.
+GAP-050,detour,lts,Unnamed tertiary,Unknown,False,False,0.0,596.0,1.0,1,0.0,0.0,,,0,,No road network path found between endpoints. Check if endpoints are in disconnected road graph areas.

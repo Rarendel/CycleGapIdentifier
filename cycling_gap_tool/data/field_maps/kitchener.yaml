@@ -1,0 +1,76 @@
+# Field map: City of Kitchener Active Transportation — Cycling Infrastructure
+# Source: https://data.kitchener.ca (Active Transportation Infrastructure dataset)
+# Geometry: WGS84 (EPSG:4326) — no reprojection needed
+#
+# Usage:
+#   python main.py --region "Kitchener" \
+#     --infra-file ./data/Cycling_Infrastructure.geojson \
+#     --infra-field-map ./data/field_maps/kitchener.yaml
+
+source_name: "City of Kitchener Cycling Infrastructure"
+
+# GeoJSON export from Kitchener Open Data is already WGS84
+source_crs: null
+
+# ── Status filtering ──────────────────────────────────────────────────────────
+# Kitchener uses STATUS = "ACTIVE" for all in-service infrastructure.
+# (Unlike many cities there is no "PLANNED" or "REMOVED" in this export —
+# all 1,601 features are ACTIVE — but the filter is kept for forward-compat.)
+status_field: "STATUS"
+status_include:
+  - "ACTIVE"
+  - "active"
+
+# ── Facility type mapping ─────────────────────────────────────────────────────
+# Kitchener's facility type is stored in SUBCATEGORY, not a generic FAC_TYPE.
+# Values confirmed by inspecting the full dataset (all 1,601 features).
+facility_field: "SUBCATEGORY"
+
+facility_map:
+  # ── Qualifying infrastructure (enter gap analysis graph) ──────────────────
+
+  # Physically separated cycle tracks (concrete or asphalt, grade-separated)
+  "CYCLE TRACK":                   protected_track
+  "BICYCLE LANE (SEPARATED)":      protected_track
+
+  # Painted on-road bike lanes (including paved shoulders and contraflow lanes)
+  "BICYCLE LANE":                  cycle_lane
+  "BICYCLE LANE (CONTRAFLOW)":     cycle_lane
+  "PAVED SHOULDER":                cycle_lane   # rideable on-road shoulder with
+                                                 # cycling designation
+
+  # Shared off-road paths and low-traffic shared routes
+  "MARKED SHARED-USE":             shared_path
+  "NEIGHBOURHOOD BIKEWAY":         shared_path  # low-traffic residential route
+  "TRANSITION TO BMUT":            shared_path  # short (~16m) ramp connector
+                                                 # between road and Busy MUP;
+                                                 # keeping it in maintains
+                                                 # graph connectivity
+
+  # ── Excluded from gap analysis (display only or non-rideable) ─────────────
+
+  # Signs and wayfinding only — no physical infrastructure
+  "SIGNED ROUTE":                  signed_route
+
+  # Crossbikes are intersection-crossing markings, not rideable segments.
+  # LINK types are virtual topology connectors (SURFACE_MATERIAL = NA (VIRTUAL LINK))
+  # used in Kitchener's internal GIS routing — they have no physical geometry.
+  "CROSSBIKE":                     unknown
+  "LINK (CYCLING)":                unknown
+  "LINK (PEDESTRIAN)":             unknown
+
+facility_fallback: "unknown"   # any future SUBCATEGORY values not listed above
+                                # are excluded from analysis
+
+# ── Name field ────────────────────────────────────────────────────────────────
+# STREET has the best coverage (1,599 of 1,601 features).
+# ROUTE_NAME_1 has nicer trail names but only covers 8 features.
+# Use STREET as primary — the report will show the street the facility is on.
+name_field: "STREET"
+name_fallback: "Unnamed"
+
+# ── Segment length filter ─────────────────────────────────────────────────────
+# TRANSITION TO BMUT segments average ~16m — set minimum below that so they
+# are retained for graph connectivity. Virtual links are excluded by the
+# facility_map above, not by length.
+min_segment_length_m: 5

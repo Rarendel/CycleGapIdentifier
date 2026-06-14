@@ -1,0 +1,6 @@
+# Optional GIS dependencies for --infra-file support
+# Install with:  pip install -r requirements-gis.txt
+
+pyyaml>=6.0        # YAML field-map configs
+fiona>=1.9         # Shapefile reading (.shp)
+pyproj>=3.4        # CRS reprojection (e.g. UTM → WGS84)
